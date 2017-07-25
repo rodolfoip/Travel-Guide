@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Insert title here</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"/>
+	<h:outputStylesheet library="css" name="estiloTravel.css"/>
+	<h:outputStylesheet library="css" name="menu.css"/>
+	<h:outputStylesheet library="css" name="cssMenuLateral.css"/>
+	<h:outputStylesheet library="font-awesome" name="font-awesome.min.css"/>
+	<h:outputScript library="js" name="bootstrap.min.js"/>
+	<h:outputScript library="js" name="e.js"/>
+	<h:outputScript library="js" name="menuLateral.js"/>
+	<!-- 
+	<link href="../css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../css/estiloTravel.css" rel="stylesheet" />
+	<link href="../css/menu.css" rel="stylesheet" />
+	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet"
+		type="text/css" />
+	<link href="../css/cssMenuLateral.css" rel="stylesheet" />
+	<link href="../css/cssCadastroADM.css" rel="stylesheet" />
+ 	-->
+</h:head>
+<h:body>
+
+<nav class="navbar navbar-inverse sidebar" role="navigation">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-sidebar-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Menu ADM</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="index.html">Home<span style="font-size: 16px;" class="pull-right hidden-xs showopacity fa fa-home"></span></a></li>
+				
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastros <span class="caret"></span><span style="font-size: 16px;" class="pull-right hidden-xs showopacity fa fa-plus"></span></a>
+					<ul class="dropdown-menu forAnimate" role="menu">
+						<h:form>
+						<li><p:commandLink styleClass="menuDrop" action="#{paradasBean.novo}">C. Paradas</p:commandLink></li>
+						<li><p:commandLink styleClass="menuDrop" action="#{terminalBean.novo}">C. Terminal</p:commandLink></li>
+						<li><p:commandLink styleClass="menuDrop" action="#{onibusBean.novo}" >C. Ônibus</p:commandLink></li>
+						<li><p:commandLink styleClass="menuDrop" action="#{usuarioBean.novo}">C. Adm</p:commandLink></li>
+						</h:form>
+						<!-- <li class="divider"></li>  Barra para dividir os menus-->
+						
+					</ul></li>
+				
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown"> Exibições <span class="caret"></span><span
+						style="font-size: 16px;"
+						class="pull-right hidden-xs showopacity fa fa-eye"></span></a>
+					<ul class="dropdown-menu forAnimate" role="menu">
+						<li><a href="listarOnibus.xhtml">Onibus</a></li>
+						<li><a href="listarParadas.xhtml">Paradas de Ônibus</a></li>
+						<li><a href="listarTerminais.xhtml">Terminais</a></li>
+						<li><a href="listarAdms.xhtml">Adms</a></li>
+						<li><a href="listarContatos.xhtml">Contatos</a></li>
+						<li><a href="../listarOnibus.xhtml">Horarios</a></li>
+						
+					</ul></li>
+					<h:form styleClass="menuDrop">
+					<li><p:commandLink styleClass="menuDrop" rendered="#{loginBean.logado}" action="#{loginBean.sair}" value="Sair"/></li>
+					</h:form>
+			</ul>
+		</div>
+	</div>
+	</nav>
+	<div class="bg">
+	<div class="main">
+		<!-- Content Here -->
+
+	<p:messages autoUpdate="true"/>
+			<h:form id="formulario">
+			<h:panelGrid columns="2">
+		
+			
+				<p:dataTable id="tabelaTerminais" var="terminais" value="#{terminalBean.terminais}">
+					
+					<p:column headerText="Terminal">
+						<h:outputText value="#{terminais.terminal}"/>
+					</p:column>
+					<p:column style="width: 100px;">
+						<p:commandButton update="tabelaTerminais" icon="ui-icon-pencil" title="Editar" action="#{terminalBean.alterar}">
+							<f:setPropertyActionListener target="#{terminalBean.terminalSelecionado}" value="#{terminal}"/>
+						</p:commandButton>
+						<p:commandButton update="tabelaTerminais" icon="ui-icon-trash" title="Excluir" action="#{terminalBean.excluir}">
+							<f:setPropertyActionListener target="#{terminalBean.terminalSelecionado}" value="#{terminal}"/>
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+				</h:panelGrid>
+			</h:form>
+	</div>
+	</div>
+	<!-- jQuery -->
+	<h:outputScript library="js" name="bootstrap.min.js"/>
+	<h:outputScript library="js" name="e.js"/>
+	<h:outputScript library="js" name="menuLateral.js"/>
+	
+	<!-- jQuery -->
+	<!-- <script src="js/jquery.js"></script>  -->
+	<!-- Bootstrap Core JavaScript -->
+	<!-- <script src="js/bootstrap.min.js"></script>
+	<script src="js/e.js"></script>
+	<script src="js/menuLateral.js"></script> -->
+	<!-- Fim do Js -->
+</h:body>
+</html>

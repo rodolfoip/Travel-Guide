@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+	<title>Cadastrar ADM Travel Guide</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/estiloTravel.css" rel="stylesheet" />
+	<link href="css/menu.css" rel="stylesheet" />
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+		type="text/css" />
+	<link href="css/cssMenuLateral.css" rel="stylesheet" />
+	<link href="css/cssCadastroADM.css" rel="stylesheet" />
+
+</h:head>
+<h:body>
+
+	<!-- Inicio menu lateral -->
+	<nav class="navbar navbar-inverse sidebar" role="navigation">
+	<div class="container-fluid">
+	
+		<!-- Marca e alternância se agrupados para melhor visualização móvel -->
+		
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-sidebar-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Menu ADM</a>
+		</div>
+		<!-- Colete os link nav, formulários e outros conteúdos para alternar -->
+		<div class="collapse navbar-collapse"
+			id="bs-sidebar-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="index.html">Home<span
+						style="font-size: 16px;"
+						class="pull-right hidden-xs showopacity glyphicon fa fa-home"></span></a></li>
+
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown">Cadastros <span class="caret"></span><span
+						style="font-size: 16px;"
+						class="pull-right hidden-xs showopacity glyphicon fa fa-plus"></span></a>
+					<ul class="dropdown-menu forAnimate" role="menu">
+
+						<li><a href="cadastroParada.xhtml">C. Paradas</a></li>
+						<li><a href="cadastroTerminal.xhtml">C. Terminal</a></li>
+						<li><a href="cadastroOnibus.xhtml">C. Ônibus</a></li>
+						<li><a href="cadastroAdm.xhtml">C. Adm</a></li>
+						<!-- <li class="divider"></li>  Barra para dividir os menus-->
+
+					</ul></li>
+
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown"> Exibições <span class="caret"></span><span
+						style="font-size: 16px;"
+						class="pull-right hidden-xs showopacity fa fa-eye"></span></a>
+					<ul class="dropdown-menu forAnimate" role="menu">
+						<li><a href="listarHorarios.xhtml">Horarios</a></li>
+						<li><a href="listarParadas.xhtml">Paradas de Ônibus</a></li>
+						<li><a href="listarTerminais.xhtml">Terminais</a></li>
+						<li><a href="listarAdms.xhtml">Administradores</a></li>
+
+					</ul></li>
+			</ul>
+			
+		</div>
+	</div>
+	</nav>
+
+	<!-- Final menu lateral -->
+
+
+
+	<!-- Inicio Formulário de cadastro -->
+	<div class="main">
+
+	<div id="form" class="col-md-8">
+		<p:messages autoUpdate="true" />
+		<h:form id="formulario">
+				<div class="formCadastroADM">
+				<p:outputLabel styleClass="formCadastroUsuario" for="nome_usuario"
+					value="Nome:" />
+				<p:inputText styleClass="campoCadastroUsuario" maxlength="80" id="nome_usuario"
+					value="#{usuarioBean.usuario.nome}"
+					required="true"
+					requiredMessage="É necessário inserir um nome de usuário!" />
+					
+				<p:outputLabel styleClass="formCadastroUsuario" for="nascimento_id"
+					value="Data de Nascimento:" />
+				<p:calendar styleClass="campoCadastroUsuario" id="nascimento_id" value="#{usuarioBean.usuario.dataNascimento}" required="true"
+					requiredMessage="É necessário inserir uma data de nascimento do usuário!" />
+
+       			<p:outputLabel styleClass="formCadastroUsuario" for="cidade_id"
+					value="Cidade:" />
+				<p:inputText styleClass="campoCadastroUsuario" maxlength="40" id="cidade_id"
+					value="#{usuarioBean.usuario.cidade}"
+					required="true"
+					requiredMessage="É necessário inserir uma cidade onde se localiza o usuário!" />
+				
+				<p:outputLabel styleClass="formCadastroUsuario" for="cpf_id"
+					value="Cpf:" />
+				<p:inputMask styleClass="campoCadastroUsuario" maxlength="14" mask="999.999.999-99" id="cpf_id"
+					value="#{usuarioBean.usuario.cpf}"
+					required="true"
+					requiredMessage="É necessário inserir um cpf para o usuário!" />
+
+				<p:outputLabel styleClass="formCadastroUsuario" for="senha_id"
+					value="Senha:" />
+				<p:password styleClass="campoCadastroUsuario"  maxlength="8" id="senha_id"
+					value="#{usuarioBean.usuario.senha}" required="true"
+					requiredMessage="É necessário inserir uma senha para o usuário!" />
+
+				<p:outputLabel styleClass="formCadastroUsuario"
+					for="confirmarsenha_id" value="Confirmar Senha:" />
+				<p:password styleClass="campoCadastroUsuario" maxlength="8" id="confirmarsenha_id"
+					value="#{usuarioBean.confirmarSenha}" required="true"
+					requiredMessage="É necessário confirmar a senha escolhida!" />
+
+				 <p:commandButton styleClass="btCadastrarLimparUsuario"	value="Limpar" action="#{usuarioBean.novo}" immediate="true" /> 
+
+				<p:commandButton styleClass="btCadastrarCadastroUsuario" value="Cadastrar" action="#{usuarioBean.salvar}" update="formulario" />
+
+			</div>
+		</h:form>
+	</div>
+	</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/e.js"></script>
+<script src="js/menuLateral.js"></script>
+</h:body>
+</html>

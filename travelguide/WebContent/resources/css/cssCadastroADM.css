@@ -1,0 +1,36 @@
+@CHARSET "ISO-8859-1";
+
+#form {
+	
+	margin-left: 20%;
+
+}
+
+.formCadastroADM {
+	margin-bottom: 30%;
+}
+
+.formCadastroUsuario {
+	
+	margin-right: 50%;
+	
+}
+
+.campoCadastroUsuario {
+	
+	margin-right: 40%;
+	background-color: #8080ff;
+	
+}
+
+.btCadastrarLimparUsuario {
+	margin-top: 10%;
+	margin-left: 80%;
+	margin-right: 30%;
+}
+
+.btCadastrarCadastroUsuario {
+	margin-top: 10%;
+	margin-left: 50%;
+	margin-right: 30%;
+}

@@ -1,0 +1,209 @@
+@CHARSET "ISO-8859-1";
+
+/*INICIO estilo botao gerar rotas*/
+.grBt {
+	color: #959595;
+	padding-top: 100px;
+}
+
+.bordaOP>a {
+	display: block;
+	height: 100%;
+	color: #47a3da;
+	-webkit-transition: background 0.2s;
+	-moz-transition: background 0.2s;
+	transition: background 0.2s;
+}
+
+.divContornoTelaAcesso {
+	/*background: black;*/
+	
+}
+
+/*Inicio Acessar Travel Guide*/
+.bg, body, html {
+	background-image: url(../img/imgsTelaAcesso/BgTeste.png);
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+.bordaTit, hr {
+	border: 1px solid #443EC1;
+	color: #443EC1;
+	background-color: #443EC1;
+	height: 1px;
+}
+
+.titAcessar1 {
+	margin-top: 50px;
+}
+
+.titAcessar2 {
+	text-decoration: none !important;
+	text-transform: none !important;
+	color: green;
+}
+
+.tgTitle {
+	text-decoration: none !important;
+	text-align: center;
+}
+
+.logoTg1 {
+	text-align: center;
+}
+
+.subTAcessar1 {
+	text-align: center;
+	color: white;
+	text-transform: none;
+}
+
+/*Início css barra do cabeçalho*/
+
+/*atualmente desativado
+
+.barraCabecalho {
+	background-color: #222;
+	background-position: 100%;
+	width: 100% !important;
+	height: 60px;
+}
+*/
+
+/*Fomal css barra do cabeçalho/
+.fundoPrincipal {
+	background-color: #563c7d;
+	width: 100% !important;
+	height: 340px;
+	margin: auto;
+	text-align: center !important;
+	position: relative;
+	margin-top: 25px !important;
+	
+}*/
+.
+.sub h3 {
+	text-align: center;
+	color: white;
+	text-transform: none;
+}
+
+.fundoAcessoTg {
+	margin-top: 20px !important;
+	width: 660px !important;
+	height: 300px;
+	margin-bottom: 5%;
+	display: table;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+.botao1 {
+	background-image: url(../img/imgsTelaAcesso/horariosAL.png) !important; 
+	border-radius: 12px;
+	float: left;
+	width: 300px !important;
+	height: 250px !important;
+}
+
+.estiloTxtBt1 {
+	padding-top: 50px;
+	text-transform: none;
+	text-decoration: none !important;
+}
+
+.botao2 { 
+	background-image: url(../img/imgsTelaAcesso/rotasAL.png) !important;
+	border-radius: 12px;
+	float: right;
+	height: 250px !important;
+	width: 300px !important;
+}
+
+.estiloTxtBt2 {
+	padding-top: 50px;
+	text-transform: none;
+	text-decoration: none !important;
+}
+
+a:link {
+	text-decoration: none !important;
+}
+
+/*================================ Inicio Css do Titulo desfocado  ================================*/
+
+/*Inicio css animação da imagem (class tgl)*/
+.tgl {
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+.tgl:hover {
+	-webkit-filter: blur(20px);
+	filter: url(#blur-effect-1)
+}
+
+/*Final css animação da imagem (class tgl)*/
+}
+.txt[contenteditable] {
+	outline: none;
+}
+
+/* Box ------------------------------------------------------ */
+#box {
+	padding: 50px;
+	font-size: 5em;
+	font-weight: bold;
+}
+
+/* txt ------------------------------------------------------ */
+.txt {
+	margin: auto;
+	text-align: center;
+	color: hsla(0, 0%, 0%, 0);
+	text-shadow: #ffffff 0 0 100px;
+	transition: text-shadow 2s cubic-bezier(0, 1, 0, 1);
+	color: hsla(0, 0%, 0%, 0);
+}
+
+@
+-moz-document url-prefix () { .txt {
+	text-shadow: #fff0020px;
+}
+
+} /* FF fix */
+#box:hover .txt {
+	text-shadow: #fff 0 0 5px;
+	transition: text-shadow 1s cubic-bezier(0, 0.75, 0, 1);
+}
+
+/*  ------------------------------------------------------ */
+.ab {
+	margin: 0 10px;
+	color: hsla(0, 0%, 0%, 0);
+	text-shadow: red 0 0 5px;
+	transition: text-shadow 1s cubic-bezier(0, 1, 0, 1);
+}
+
+#box:hover .ab {
+	text-shadow: red 0 0 100px;
+	transition: text-shadow 2s cubic-bezier(0, 0.75, 0, 1);
+}
+
+@
+-moz-document url-prefix () { # box: hover .ab {
+	text-shadow: red 0 0 20px;
+}
+} /* FF fix */
+
+/*================================ Final Css do Titulo desfocado ================================*/
+
+/*================================ INICIO TESTEEEEEE ================================*/
+
+/*================================ FINAL TESTEEEEEE ================================*/

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Listar Horarios</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	
+	<link href="css/menu.css" rel="stylesheet" />
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+		type="text/css" />
+	<link href="css/NewFile.css" rel="stylesheet" />
+	<link href="resources/css/estiloTravel.css" rel="stylesheet" />
+	<link href="css/cssMenuTelaAcesso/styles.css" rel="stylesheet" />
+
+	<!-- Final Links css menu -->
+
+	<!-- Início Links css botão -->
+
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<link rel="stylesheet" type="text/css"
+		href="css/cssMenuTelaAcesso/common.css" />
+	<link rel="stylesheet" type="text/css"
+		href="css/cssMenuTelaAcesso/style5.css" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700"
+		rel="stylesheet" type="text/css" />
+</h:head>
+<h:body>
+	<!-- ====================== Inicio Menu ====================== -->
+						<div class="barraCabecalho">
+
+
+							<div id="cssmenu">
+								<ul>
+
+									<li><a href="index.html">Início <i class="fa fa-home"></i></a></li>
+
+									<li><a href="acessarTravelGuide.xhtml">Interface de acesso<i
+											class="fa fa-user"></i></a></li>
+
+
+								</ul>
+							</div>
+
+						</div>
+
+						<!-- ====================== Final Menu ====================== -->
+	<div class="bg">
+	<div class="main">
+		<!-- Content Here -->
+
+	
+	
+<div id="form" class="col-md-12">
+<h:form>
+<p:messages autoUpdate="true" />
+	<p:dataTable id="tabelaHorarios" var="horario" widgetVar="tableHorarios" value="#{horarioBean.listarHorarios()}" scrollable="true" scrollHeight="300">
+		<p:column headerText="Nome">
+			<h:outputText value="#{horario.onibus.nomeOnibus}" />
+		</p:column>
+		<p:column headerText="Horario">
+			<h:outputText value="#{horario.horario}" />
+		</p:column>
+		<p:column headerText="Dia da Semana">
+			<h:outputText value="#{horario.diaSemana}">
+				<f:convertDateTime pattern="HH:mm"/>
+			</h:outputText>
+		</p:column>
+	</p:dataTable>
+</h:form>
+</div>
+</div>
+</div>
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/e.js"></script>
+	<script src="js/menuLateral.js"></script>
+</h:body>
+</html>

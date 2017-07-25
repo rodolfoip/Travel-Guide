@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+	<title>Travel Guide / Gerar rotas</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/estiloTravel.css" rel="stylesheet" />
+	<link href="css/menu.css" rel="stylesheet" />
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+		type="text/css" />
+	<link href="css/cssContatoTG.css" rel="stylesheet" />
+	<link href="css/cssMenuLateral.css" rel="stylesheet" />
+	
+	<link href="css/cssMenuTelaAcesso/styles.css" rel="stylesheet" />
+	<link href="css/estiloRotas.css" rel="stylesheet" />
+
+	<!-- Final Links css menu -->
+
+	<!-- Início Links css botão -->
+	<link href="css/estiloTelaDeAcesso.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<link rel="stylesheet" type="text/css"
+		href="css/cssMenuTelaAcesso/common.css" />
+	<link rel="stylesheet" type="text/css"
+		href="css/cssMenuTelaAcesso/style5.css" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700"
+		rel="stylesheet" type="text/css" />
+
+</h:head>
+
+<h:body>
+<div class="bg">
+	<!-- ====================== Inicio Menu ====================== -->
+						<div class="barraCabecalho">
+
+
+							<div id="cssmenu">
+								<ul>
+
+									<li><a href="index.html">Início <i class="fa fa-home"></i></a></li>
+
+									<li><a href="acessarTravelGuide.xhtml">Interface de acesso<i
+											class="fa fa-user"></i></a></li>
+
+
+								</ul>
+							</div>
+
+						</div>
+
+						<!-- ====================== Final Menu ====================== -->
+		<!-- INICIO GERAR ROTAS -->
+		<div class="container">
+		<div class="row">
+			<p:messages autoUpdate="true"/>
+	<h:form id="tableRotas">
+	<p:outputLabel styleClass="origem_gerar" value="Origem" for="origem"/>
+ 	<p:inputText styleClass="campo_origem" value="#{onibusBean.origem}" id="origem" required="true" placeholder="Digite sua localização"/>
+ 	
+ 	<p:outputLabel styleClass="destino_gerar" value="Destino" for="destino"/>
+ 	<p:inputText styleClass="campo_destino" value="#{onibusBean.destino}" id="destino" required="true" placeholder="Digite seu destino"/>
+ 	<p:outputLabel styleClass="bus_gerar" value="Ônibus de partida" for="rotas"/>
+ 	
+	<p:commandButton styleClass="btn_bus" update="tableRotas, rotas" value="Pesquisar ônibus partida" action="#{onibusBean.listarOnibus}"/>
+		<h:selectOneMenu id="rotas" value="#{onibusBean.onibus}" converter="onibusConverter">
+					<f:selectItem itemValue="" itemLabel="Selecione..."/>
+					<f:selectItems value="#{onibusBean.listaOnibus2}" var="onibus" itemLabel="#{onibus.nomeOnibus}" itemValue="#{onibus}"/>
+		</h:selectOneMenu>
+ 	<p:commandButton styleClass="btn_rota" update="tableRotas" value="gerar rotas" action="#{onibusBean.rotas}"/>
+		
+ 		<h:panelGrid>
+ 					<p:dataTable id="tableRotas" var="bus" value="#{onibusBean.listaOnibus1}" >
+ 						<p:column headerText="nome onibus">
+ 							<h:outputText value="#{bus.nomeOnibus}"/>
+ 						</p:column>
+ 						<p:column headerText="numero">
+ 							<h:outputText value="#{bus.numeroOnibus}"/>
+ 						</p:column>
+ 						
+ 
+ 					</p:dataTable>
+ 		</h:panelGrid>
+ 	</h:form>
+ 	</div>
+ 	</div>
+		<!-- FIM GERAR ROTAS -->
+	</div>
+</h:body>
+</html>

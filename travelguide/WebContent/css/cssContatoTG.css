@@ -1,0 +1,140 @@
+/*INICIO Css do formulário de contato*/
+.TituloCt {
+	font-weight: normal;
+	letter-spacing: 0pt;
+	word-spacing: 3pt;
+	font-size: 37px;
+	text-align: center;
+	text-shadow: 0 3px 3px rgba(0, 0, 3, 0.3); color : #784ea7;
+	line-height: 1;
+	margin: 20px;
+	padding: 0px;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif !important;
+}
+
+.divFundoFormularioFirst {
+	
+}
+
+.divFundoFormulario {
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.0);
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.formulario {
+	padding-top: 50px;
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	width: 600px;
+  color: #ffffff;
+}
+
+S
+.cadastroUsuario {
+	margin-left: 40%;
+	display: inline-block;
+}
+
+.formLabel {
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+
+.formInput {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+/*INICIO Campos contato*/
+.campoContatoAssunto {
+	padding-right: 64%;
+	margin-bottom: 2%;
+}
+
+.campoContatoGopedal {
+	padding-bottom: 50px;
+	padding-right: 365px;
+}
+
+.campoContatoNome {
+	padding-right: 64%;
+	margin-bottom: 2%;
+}
+
+.campoContatoEmail {
+	margin-bottom: 2%;
+	padding-right: 13%;
+	margin-right: 1%;
+}
+
+.campoContatotelefone {
+	margin-bottom: 2%;
+	padding-right: 14%;
+	padding-left: 9px;
+}
+
+.txtContatoEmail {
+	margin-right: 38.5%;
+}
+
+.txtContatoTelefone {
+	margin-right: 20%;
+}
+
+.btnLimparContato {
+	margin-top: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #fafafa;
+	padding: 8px 25px;
+	background: -moz-linear-gradient(top, #00c1c1 0%, #428aca);
+	background: -webkit-gradient(linear, left top, left bottom, from(#443EC1),
+		to(#443EC1));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #ffffff;
+	-moz-box-shadow: 0px 1px 3px rgba(121, 122, 121, 0.5), inset 0px 0px 1px
+		rgba(128, 128, 128, 1);
+	-webkit-box-shadow: 0px 1px 3px rgba(121, 122, 121, 0.5), inset 0px 0px
+		1px rgba(128, 128, 128, 1);
+	box-shadow: 0px 1px 3px rgba(121, 122, 121, 0.5), inset 0px 0px 1px
+		rgba(128, 128, 128, 1);
+	text-shadow: 0px -1px 0px rgba(255, 255, 255, 0), 0px -1px 0px
+		rgba(255, 255, 255, 0.1);
+}
+
+.btnSalvarContato {
+	margin-top: 20px;
+	margin-left: 305px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #fafafa;
+	padding: 8px 25px;
+	background: -moz-linear-gradient(top, #00c1c1 0%, #428aca);
+	background: -webkit-gradient(linear, left top, left bottom, from(#443EC1),
+		to(#443EC1));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #ffffff;
+	-moz-box-shadow: 0px 1px 3px rgba(121, 122, 121, 0.5), inset 0px 0px 1px
+		rgba(128, 128, 128, 1);
+	-webkit-box-shadow: 0px 1px 3px rgba(121, 122, 121, 0.5), inset 0px 0px
+		1px rgba(128, 128, 128, 1);
+	box-shadow: 0px 1px 3px rgba(121, 122, 121, 0.5), inset 0px 0px 1px
+		rgba(128, 128, 128, 1);
+	text-shadow: 0px -1px 0px rgba(255, 255, 255, 0), 0px -1px 0px
+		rgba(255, 255, 255, 0.1);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Final Campos contato*/
+
+/*FINAL Css do formulário de contato*/
