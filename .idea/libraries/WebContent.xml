@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="WebContent">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/travelguide/WebContent/BotõesDaParteACESSARTG.zip!/" />
+      <root url="jar://$PROJECT_DIR$/travelguide/WebContent/assets.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
